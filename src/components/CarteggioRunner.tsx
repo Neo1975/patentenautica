@@ -1,8 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { CarteggioAnswerMap, CarteggioCandidateValue, CarteggioExercise, CarteggioResult } from "@/lib/types";
-import { CARTEGGIO_MAX_ERRORS, CARTEGGIO_TIME_LIMIT_SEC } from "@/lib/carteggio";
+import type {
+  CarteggioAnswerMap,
+  CarteggioCandidateValue,
+  CarteggioExercise,
+  CarteggioResult,
+  CarteggioTipoPatente,
+} from "@/lib/types";
+import { CARTEGGIO_MAX_ERRORS, CARTEGGIO_TIME_LIMIT_SEC, TIPO_PATENTE_LABELS } from "@/lib/carteggio";
 import { buildInitialCarteggioAnswers, computeCarteggioResult } from "@/lib/carteggio-check";
 import CarteggioExerciseCard from "@/components/CarteggioExerciseCard";
 import CarteggioResultSummary from "@/components/CarteggioResultSummary";
@@ -10,7 +16,8 @@ import QuestionNav from "@/components/QuestionNav";
 import Timer from "@/components/Timer";
 
 type Props = {
-  carta: string;
+  tipoPatente: CarteggioTipoPatente;
+  carta: string | null;
   exercises: CarteggioExercise[];
   onExit: () => void;
 };
@@ -23,7 +30,7 @@ function buildInitialAnswers(exercises: CarteggioExercise[]): Record<string, Car
   return init;
 }
 
-export default function CarteggioRunner({ carta, exercises, onExit }: Props) {
+export default function CarteggioRunner({ tipoPatente, carta, exercises, onExit }: Props) {
   const [exIdx, setExIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, CarteggioAnswerMap>>(() =>
     buildInitialAnswers(exercises)
@@ -42,7 +49,9 @@ export default function CarteggioRunner({ carta, exercises, onExit }: Props) {
   const finish = () => {
     if (completedRef.current) return;
     completedRef.current = true;
-    setResult(computeCarteggioResult(carta, exercises, answersRef.current, CARTEGGIO_MAX_ERRORS));
+    setResult(
+      computeCarteggioResult(tipoPatente, carta, exercises, answersRef.current, CARTEGGIO_MAX_ERRORS)
+    );
   };
 
   useEffect(() => {
@@ -61,7 +70,9 @@ export default function CarteggioRunner({ carta, exercises, onExit }: Props) {
   }, []);
 
   if (result) {
-    return <CarteggioResultSummary exercises={exercises} answers={answers} result={result} onHome={onExit} />;
+    return (
+      <CarteggioResultSummary exercises={exercises} answers={answers} result={result} onHome={onExit} />
+    );
   }
 
   const exercise = exercises[exIdx];
@@ -92,9 +103,11 @@ export default function CarteggioRunner({ carta, exercises, onExit }: Props) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-sky-600 dark:text-sky-400">
-            Test di carteggio
+            Test di carteggio — {TIPO_PATENTE_LABELS[tipoPatente].label}
           </p>
-          <h2 className="text-lg font-bold text-slate-900 dark:text-slate-50">Carta {carta}</h2>
+          <h2 className="text-lg font-bold text-slate-900 dark:text-slate-50">
+            {carta ? `Carta ${carta}` : "Quiz su elementi di carteggio nautico"}
+          </h2>
         </div>
         <Timer seconds={seconds} mode="countdown" />
       </div>

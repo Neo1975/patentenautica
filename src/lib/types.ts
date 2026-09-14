@@ -135,10 +135,21 @@ export type CarteggioQuesito = {
   expected: CarteggioExpectedAnswer;
 };
 
+/**
+ * Le due categorie di patente nautica, che richiedono due prove di carteggio
+ * diverse: "entro12" (entro le 12 miglia dalla costa) usa il "Quiz su elementi
+ * di carteggio nautico" (calcoli di rotta/tempo/carburante/coordinate, senza
+ * una carta nautica specifica); "senzaLimiti" (senza alcun limite dalla costa)
+ * usa la prova di carteggio vera e propria su una carta nautica (5D o 42D).
+ */
+export type CarteggioTipoPatente = "entro12" | "senzaLimiti";
+
 export type CarteggioExercise = {
   id: string;
   progressivo: string;
-  carta: string;
+  tipoPatente: CarteggioTipoPatente;
+  /** Carta nautica di riferimento (es. "5D", "42D"): presente solo per "senzaLimiti". */
+  carta: string | null;
   settore: string | null;
   argomento: string | null;
   scenario: string;
@@ -174,7 +185,8 @@ export type CarteggioExerciseResult = {
 };
 
 export type CarteggioResult = {
-  carta: string;
+  tipoPatente: CarteggioTipoPatente;
+  carta: string | null;
   total: number;
   wrongExercises: number;
   maxErrors: number;

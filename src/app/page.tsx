@@ -57,8 +57,9 @@ export default function HomePage() {
             Test di carteggio
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-300">
-            5 esercizi in 20 minuti: inserisci i valori richiesti (distanze, orari, coordinate),
-            verificati automaticamente. Massimo 1 errore.
+            5 esercizi in 20 minuti, con la prova giusta per la tua categoria di patente (entro le 12
+            miglia o senza limiti). Inserisci i valori richiesti, verificati automaticamente. Massimo 1
+            errore.
           </p>
         </Link>
       </div>

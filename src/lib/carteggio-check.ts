@@ -8,6 +8,7 @@ import type {
   CarteggioQuesito,
   CarteggioQuesitoResult,
   CarteggioResult,
+  CarteggioTipoPatente,
 } from "@/lib/types";
 
 const EPS = 1e-6;
@@ -155,7 +156,8 @@ export function checkExercise(
 }
 
 export function computeCarteggioResult(
-  carta: string,
+  tipoPatente: CarteggioTipoPatente,
+  carta: string | null,
   exercises: CarteggioExercise[],
   answersByExercise: Record<string, CarteggioAnswerMap>,
   maxErrors: number
@@ -163,6 +165,7 @@ export function computeCarteggioResult(
   const exerciseResults = exercises.map((ex) => checkExercise(ex, answersByExercise[ex.id] ?? {}));
   const wrongExercises = exerciseResults.filter((r) => !r.correct).length;
   return {
+    tipoPatente,
     carta,
     total: exercises.length,
     wrongExercises,

@@ -2,21 +2,36 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import type { CarteggioExercise } from "@/lib/types";
-import { buildCarteggioExam, getCarteOptions } from "@/lib/carteggio";
+import type { CarteggioExercise, CarteggioTipoPatente } from "@/lib/types";
+import { TIPO_PATENTE_LABELS, buildCarteggioExam, getCarteOptions } from "@/lib/carteggio";
 import CarteggioRunner from "@/components/CarteggioRunner";
+
+const TIPO_PATENTE_OPTIONS: CarteggioTipoPatente[] = ["entro12", "senzaLimiti"];
 
 export default function CarteggioPage() {
   const router = useRouter();
   const carte = getCarteOptions();
-  const [carta, setCarta] = useState(carte[0]?.carta ?? "");
-  const [exam, setExam] = useState<{ carta: string; exercises: CarteggioExercise[] } | null>(null);
+  const [tipoPatente, setTipoPatente] = useState<CarteggioTipoPatente | null>(null);
+  const [carta, setCarta] = useState<string>(carte[0]?.carta ?? "");
+  const [exam, setExam] = useState<{
+    tipoPatente: CarteggioTipoPatente;
+    carta: string | null;
+    exercises: CarteggioExercise[];
+  } | null>(null);
 
   if (exam) {
     return (
-      <CarteggioRunner carta={exam.carta} exercises={exam.exercises} onExit={() => setExam(null)} />
+      <CarteggioRunner
+        tipoPatente={exam.tipoPatente}
+        carta={exam.carta}
+        exercises={exam.exercises}
+        onExit={() => setExam(null)}
+      />
     );
   }
+
+  const needsCarta = tipoPatente === "senzaLimiti";
+  const canStart = tipoPatente === "entro12" || (tipoPatente === "senzaLimiti" && Boolean(carta));
 
   return (
     <div className="flex flex-col gap-6">
@@ -30,25 +45,62 @@ export default function CarteggioPage() {
       </div>
 
       <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
-        <h2 className="mb-3 font-semibold text-slate-900 dark:text-slate-50">Scegli la carta nautica</h2>
-        <div className="flex flex-wrap gap-2">
-          {carte.map((c) => (
+        <h2 className="mb-1 font-semibold text-slate-900 dark:text-slate-50">
+          1. Per quale categoria di patente ti stai preparando?
+        </h2>
+        <p className="mb-3 text-sm text-slate-500 dark:text-slate-400">
+          Le due categorie prevedono una prova di carteggio diversa.
+        </p>
+        <div className="flex flex-col gap-2 sm:flex-row">
+          {TIPO_PATENTE_OPTIONS.map((tp) => (
             <button
-              key={c.carta}
+              key={tp}
               type="button"
-              onClick={() => setCarta(c.carta)}
-              className={`rounded-xl border px-4 py-2 text-sm font-semibold transition ${
-                carta === c.carta
-                  ? "border-sky-600 bg-sky-50 text-sky-700 dark:bg-sky-950 dark:text-sky-300"
-                  : "border-slate-300 text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+              onClick={() => {
+                setTipoPatente(tp);
+                if (tp === "entro12") setCarta("");
+              }}
+              className={`flex-1 rounded-xl border p-4 text-left transition ${
+                tipoPatente === tp
+                  ? "border-sky-600 bg-sky-50 dark:bg-sky-950"
+                  : "border-slate-300 hover:bg-slate-50 dark:border-slate-700 dark:hover:bg-slate-800"
               }`}
             >
-              Carta {c.carta}
-              <span className="ml-1.5 font-normal text-slate-400">({c.count} esercizi)</span>
+              <p className="font-semibold text-slate-900 dark:text-slate-50">
+                {TIPO_PATENTE_LABELS[tp].label}
+              </p>
+              <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                {TIPO_PATENTE_LABELS[tp].description}
+              </p>
             </button>
           ))}
         </div>
       </div>
+
+      {needsCarta && (
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900">
+          <h2 className="mb-3 font-semibold text-slate-900 dark:text-slate-50">
+            2. Scegli la carta nautica
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {carte.map((c) => (
+              <button
+                key={c.carta}
+                type="button"
+                onClick={() => setCarta(c.carta)}
+                className={`rounded-xl border px-4 py-2 text-sm font-semibold transition ${
+                  carta === c.carta
+                    ? "border-sky-600 bg-sky-50 text-sky-700 dark:bg-sky-950 dark:text-sky-300"
+                    : "border-slate-300 text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                }`}
+              >
+                Carta {c.carta}
+                <span className="ml-1.5 font-normal text-slate-400">({c.count} esercizi)</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-200">
         <p>
@@ -62,8 +114,8 @@ export default function CarteggioPage() {
       <div className="flex flex-wrap gap-3">
         <button
           type="button"
-          onClick={() => setExam(buildCarteggioExam(carta))}
-          disabled={!carta}
+          onClick={() => tipoPatente && setExam(buildCarteggioExam(tipoPatente, carta || null))}
+          disabled={!canStart}
           className="rounded-xl bg-sky-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-700 disabled:cursor-not-allowed disabled:opacity-40"
         >
           Inizia la prova

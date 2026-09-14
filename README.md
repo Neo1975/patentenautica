@@ -12,13 +12,19 @@ Contiene il testo integrale ufficiale pubblicato dal Ministero delle Infrastrutt
   massimo 1 errore) se lo studente ha scelto quella specializzazione.
 - **Allenamento per argomento**: lo studente sceglie liberamente uno o più argomenti e quante domande
   affrontare, senza limiti di tempo né soglie di errore.
-- **Test di carteggio**: 5 esercizi estratti a caso (a scelta tra le carte 5D e 42D), 20 minuti a
-  disposizione, massimo 1 esercizio errato. Il candidato legge il testo dell'esercizio così come pubblicato
-  dal Ministero e inserisce i valori richiesti (distanza, ora di arrivo, carburante da imbarcare, coordinate
-  di partenza/arrivo, rilevamenti, ecc.); i valori vengono confrontati con l'intervallo di soluzione
-  ufficiale applicando un arrotondamento (0,1 per miglia/nodi/litri/minuti di coordinate, 1° intero per i
-  rilevamenti in gradi). Un esercizio è considerato errato se anche un solo quesito al suo interno è
-  sbagliato o incompleto.
+- **Test di carteggio**: il Ministero prevede due prove di carteggio distinte, una per ciascuna categoria di
+  patente, e l'app le tiene separate fin dalla schermata di scelta:
+  - **Entro le 12 miglia dalla costa**: "Quiz su elementi di carteggio nautico" (pag. 287-297 dell'Allegato
+    A), calcoli di rotta/tempo/carburante/coordinate senza una carta nautica specifica.
+  - **Senza alcun limite dalla costa**: prova di carteggio vera e propria su una carta nautica specifica
+    (5D o 42D, pag. 298+ dell'Allegato A).
+
+  In entrambi i casi: 5 esercizi estratti a caso, 20 minuti a disposizione, massimo 1 esercizio errato. Il
+  candidato legge il testo dell'esercizio così come pubblicato dal Ministero e inserisce i valori richiesti
+  (distanza, ora di arrivo, carburante da imbarcare, coordinate di partenza/arrivo, rilevamenti, ecc.); i
+  valori vengono confrontati con l'intervallo di soluzione ufficiale applicando un arrotondamento (0,1 per
+  miglia/nodi/litri/minuti di coordinate, 1° intero per i rilevamenti in gradi). Un esercizio è considerato
+  errato se anche un solo quesito al suo interno è sbagliato o incompleto.
 - Domande corredate delle immagini di riferimento ministeriali, quando richieste (120 domande su 1722).
 - Revisione finale con le domande/esercizi sbagliati o senza risposta, soluzione corretta evidenziata.
 
@@ -34,7 +40,7 @@ src/
     page.tsx                Home
     esame/page.tsx           Setup + avvio simulazione esame ufficiale
     allenamento/page.tsx     Setup + avvio allenamento per argomento
-    carteggio/page.tsx       Setup (scelta carta) + avvio test di carteggio
+    carteggio/page.tsx       Setup (scelta categoria patente + carta) + avvio test di carteggio
     layout.tsx                Layout comune (header/footer)
   components/
     QuizRunner.tsx            Motore di esecuzione del quiz base/vela (timer, navigazione, invio)
@@ -51,7 +57,7 @@ src/
     categories.ts               Helper sulle categorie/materie
     questions.ts                 Generazione del quiz ufficiale e di allenamento
     scoring.ts                   Calcolo del risultato del quiz base/vela
-    carteggio.ts                 Estrazione degli esercizi di carteggio per carta nautica
+    carteggio.ts                 Estrazione degli esercizi di carteggio per categoria patente/carta nautica
     carteggio-check.ts           Validazione delle risposte di carteggio (con arrotondamento)
   data/
     categories.json             Elenco materie con numero di domande ufficiali per materia
@@ -95,7 +101,8 @@ Ogni esercizio ha questo formato (esempio semplificato):
 {
   "id": "cart-4_1_1-1",
   "progressivo": "4.1.1 - 1",
-  "carta": "5D",
+  "tipoPatente": "entro12",
+  "carta": null,
   "settore": "SETTORE NORD OVEST ORIZZONTALE",
   "argomento": null,
   "scenario": "Partenza alle ore 09:00 da Capo di S. Andrea ... determinare:",
@@ -106,6 +113,10 @@ Ogni esercizio ha questo formato (esempio semplificato):
   ]
 }
 ```
+
+`tipoPatente` vale `"entro12"` (50 esercizi, `carta` sempre `null`) oppure `"senzaLimiti"` (135 esercizi,
+`carta` sempre `"5D"` o `"42D"`) e determina quale prova viene proposta in base alla categoria di patente
+scelta nella schermata di setup — le due prove non vengono mai mescolate.
 
 I tipi di risposta attesa sono quattro: `range` (intervallo numerico con unità), `single` (valore esatto),
 `time_range` (intervallo orario) e `coordinate` (latitudine/longitudine, ciascuna con grado fisso e

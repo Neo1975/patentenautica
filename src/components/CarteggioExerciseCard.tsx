@@ -35,7 +35,7 @@ export default function CarteggioExerciseCard({
           Esercizio {index + 1} di {total}
         </span>
         <span className="rounded-full bg-sky-50 px-2.5 py-1 text-sky-700 dark:bg-sky-950 dark:text-sky-300">
-          Carta {exercise.carta}
+          {exercise.carta ? `Carta ${exercise.carta}` : "Senza carta nautica"}
         </span>
       </div>
 
