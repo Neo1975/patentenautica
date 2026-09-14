@@ -1,0 +1,1982 @@
+[
+  {
+    "id": "SCA-001",
+    "categoryId": "scafo",
+    "text": "Il baricentro di un'imbarcazione è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Il punto di applicazione della spinta di Archimede",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Il punto in cui si considera concentrato il peso dell'imbarcazione",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Il punto più basso della carena",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-002",
+    "categoryId": "scafo",
+    "text": "Il centro di carena (o centro di spinta) è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Il punto di applicazione della spinta idrostatica",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Il punto più alto dello scafo",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un punto che coincide sempre con il baricentro",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-003",
+    "categoryId": "scafo",
+    "text": "Un'imbarcazione è in equilibrio stabile quando, inclinata da una forza esterna, tende a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Capovolgersi",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Ritornare nella posizione di equilibrio iniziale",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Rimanere nella nuova posizione assunta",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-004",
+    "categoryId": "scafo",
+    "text": "Il pescaggio di un'imbarcazione è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La distanza verticale tra la chiglia e la linea di galleggiamento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La larghezza massima dello scafo",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "L'altezza dell'opera morta",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-005",
+    "categoryId": "scafo",
+    "text": "Il baglio è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Un elemento strutturale trasversale che sostiene il ponte",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Il fondo piatto dello scafo",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un tipo di vela di prua",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-006",
+    "categoryId": "scafo",
+    "text": "L'opera viva di uno scafo è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La parte emersa dello scafo",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "La parte immersa dello scafo, a contatto con l'acqua",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "La coperta e la tuga",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-007",
+    "categoryId": "scafo",
+    "text": "La chiglia è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "L'elemento strutturale longitudinale alla base dello scafo",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Il timone dell'imbarcazione",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un tipo di parabordo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-008",
+    "categoryId": "scafo",
+    "text": "Il dislocamento (o spostamento) di un'imbarcazione corrisponde:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Al peso del solo scafo vuoto",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Al peso dell'acqua spostata dalla carena, pari al peso totale dell'imbarcazione",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Al peso del solo equipaggio imbarcato",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-009",
+    "categoryId": "scafo",
+    "text": "Il bordo libero è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La distanza verticale tra la linea di galleggiamento e il ponte",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La lunghezza fuori tutto dello scafo",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "La superficie velica esposta al vento",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SCA-010",
+    "categoryId": "scafo",
+    "text": "Una carena stretta e profonda, rispetto a una larga e piatta, offre generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Maggiore stabilità di forma",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Minore stabilità di forma e maggiore stabilità di peso",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Nessuna differenza in termini di stabilità",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-001",
+    "categoryId": "motori",
+    "text": "Il motore diesel si accende per:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La scintilla generata dalla candela",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Autoaccensione della miscela dovuta all'elevata compressione",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Un innesco elettrico esterno continuo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-002",
+    "categoryId": "motori",
+    "text": "Nei motori fuoribordo a 2 tempi il lubrificante:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Va miscelato con il carburante o iniettato separatamente",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Non è mai necessario",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Va inserito solo nella scatola del cambio",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-003",
+    "categoryId": "motori",
+    "text": "L'elica a passo fisso, rispetto a quella a passo variabile:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Ha un rendimento ottimale solo per un range ristretto di condizioni di funzionamento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "È sempre più efficiente in ogni condizione",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Non può mai essere utilizzata in retromarcia",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-004",
+    "categoryId": "motori",
+    "text": "Il raffreddamento ad acqua di mare di un motore entrobordo richiede il controllo periodico:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Della sola cinghia dell'alternatore",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Della girante della pompa e dei filtri della presa a mare",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Del solo livello dell'olio motore",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-005",
+    "categoryId": "motori",
+    "text": "In caso di surriscaldamento del motore è opportuno:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Aumentare il regime di giri per favorire il raffreddamento",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Ridurre il regime e verificare il circuito di raffreddamento",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Ignorare la spia se il motore continua a girare regolarmente",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-006",
+    "categoryId": "motori",
+    "text": "La candela di un motore a scoppio serve a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Comprimere la miscela aria-benzina",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Generare la scintilla che accende la miscela aria-benzina",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Lubrificare le pareti dei cilindri",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-007",
+    "categoryId": "motori",
+    "text": "Il numero di giri al minuto del motore si misura con:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Il barometro",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Il contagiri",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "L'anemometro",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-008",
+    "categoryId": "motori",
+    "text": "Prima di avviare il motore entrobordo a benzina è buona norma:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Azionare la ventola del vano motore per disperdere eventuali vapori",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Chiudere tutte le prese d'aria del vano motore",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Aprire lo scarico a mare manualmente",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-009",
+    "categoryId": "motori",
+    "text": "Il libretto di uso e manutenzione del motore indica tra l'altro:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Gli intervalli di sostituzione di olio e filtri",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Solo il colore consigliato per la carena",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Le rotte consigliate per la navigazione",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MOT-010",
+    "categoryId": "motori",
+    "text": "Un'elica sottodimensionata rispetto alla potenza del motore tende a farlo girare:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "A regimi troppo alti, con rischio di sovraccarico meccanico",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Sempre a regimi troppo bassi",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Non ha alcun effetto sul regime del motore",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-001",
+    "categoryId": "sicurezza",
+    "text": "I mezzi collettivi di salvataggio comprendono:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Le zattere di salvataggio",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Solo i giubbotti individuali",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Solo gli estintori di bordo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-002",
+    "categoryId": "sicurezza",
+    "text": "Il segnale di soccorso \"Mayday\" via radio VHF si trasmette sul canale:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Canale 16",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Canale 9",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Canale 6",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-003",
+    "categoryId": "sicurezza",
+    "text": "Il numero di giubbotti di salvataggio a bordo deve essere:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Pari al numero massimo di persone trasportabili",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Sempre e comunque solo 2, indipendentemente dal numero di persone",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Non previsto per le unità da diporto",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-004",
+    "categoryId": "sicurezza",
+    "text": "Il dispositivo EPIRB serve a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Segnalare la posizione della barca in emergenza tramite satellite",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Consentire di respirare sott'acqua",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Misurare la profondità del fondale",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-005",
+    "categoryId": "sicurezza",
+    "text": "In caso di uomo a mare, la prima azione corretta è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Allontanarsi subito dal punto di caduta",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Lanciare immediatamente un salvagente anulare e tenere d'occhio il naufrago",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Fermare il motore e attendere i soccorsi senza fare altro",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-006",
+    "categoryId": "sicurezza",
+    "text": "I razzi a paracadute a luce rossa servono a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Segnalare pericolo e richiedere soccorso a lunga distanza",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Illuminare la rotta durante la navigazione notturna",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Segnalare la partenza di una regata",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-007",
+    "categoryId": "sicurezza",
+    "text": "L'estintore a bordo deve essere:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Collocato in un punto facilmente raggiungibile e verificato periodicamente",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Tenuto sempre chiuso in un armadio non accessibile",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Sostituito solo se risulta danneggiato esternamente",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-008",
+    "categoryId": "sicurezza",
+    "text": "In caso di incendio a bordo causato da un liquido infiammabile è opportuno:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Usare acqua in abbondanza",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Usare un estintore idoneo (classe B) ed evitare l'acqua",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Gettare in mare il liquido mentre brucia",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-009",
+    "categoryId": "sicurezza",
+    "text": "Il segnale di pericolo effettuato con un braccio steso lateralmente e mosso lentamente su e giù indica:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Richiesta di assistenza",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Tutto regolare a bordo",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Richiesta di rimorchio",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "SIC-010",
+    "categoryId": "sicurezza",
+    "text": "Le zattere di salvataggio autogonfiabili devono essere sottoposte a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Revisione periodica presso centri di assistenza autorizzati",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Nessuna manutenzione, essendo dispositivi monouso",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Sostituzione soltanto dopo l'uso",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-001",
+    "categoryId": "manovra",
+    "text": "Durante l'ormeggio, i cavi che impediscono il movimento longitudinale dell'imbarcazione lungo la banchina si chiamano:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Traverse",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Spring",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Draglie",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-002",
+    "categoryId": "manovra",
+    "text": "In fase di ormeggio con vento al traverso che spinge la barca verso la banchina, è opportuno:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Avvicinarsi con angolo ampio e velocità minima, pronti a contromanovrare",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Avvicinarsi alla banchina a tutta velocità",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Ormeggiare sempre e solo di poppa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-003",
+    "categoryId": "manovra",
+    "text": "L'abbrivio è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La velocità residua dell'imbarcazione dopo aver tolto potenza al motore",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La direzione del vento reale",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un tipo di ancora",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-004",
+    "categoryId": "manovra",
+    "text": "\"Dare fondo\" all'ancora significa:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Issare l'ancora a bordo",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Calare l'ancora sul fondale per ormeggiare",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Tagliare la catena dell'ancora",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-005",
+    "categoryId": "manovra",
+    "text": "La lunghezza di catena da filare per un ormeggio sicuro, rispetto alla profondità del fondale, deve essere generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Pari alla profondità del fondale",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Da 3 a 5 volte la profondità del fondale",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Sempre inferiore alla profondità del fondale",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-006",
+    "categoryId": "manovra",
+    "text": "In manovra in porto, in presenza di corrente, conviene generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Manovrare tenendo conto della corrente per mantenere il governo dell'imbarcazione",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Ignorare completamente l'effetto della corrente",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Manovrare sempre e solo con la corrente esattamente in poppa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-007",
+    "categoryId": "manovra",
+    "text": "L'effetto evolutivo dell'elica in retromarcia su molte imbarcazioni tende a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Far accostare lateralmente la poppa",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Non avere alcun effetto sulla prua",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Far avanzare la barca più velocemente",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-008",
+    "categoryId": "manovra",
+    "text": "Prima di lasciare l'ormeggio è buona norma:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Verificare vento, corrente e traffico circostante",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Partire subito al massimo regime del motore",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Non controllare nulla se il motore è già acceso",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-009",
+    "categoryId": "manovra",
+    "text": "In caso di rimorchio di un'altra imbarcazione, la velocità deve essere:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Elevata, per ridurre i tempi di manovra",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Moderata e commisurata alle condizioni del cavo e del mare",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Sempre al massimo consentito dal motore",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MAN-010",
+    "categoryId": "manovra",
+    "text": "La virata di bordo (accostata) va effettuata:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Senza necessità di guardarsi intorno",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Dopo essersi accertati che non vi siano ostacoli o altre unità in rotta di collisione",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Solamente all'interno del porto",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-001",
+    "categoryId": "colreg",
+    "text": "Tra due imbarcazioni a motore che si incrociano, quella che vede l'altra sulla propria dritta deve:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Mantenere invariate rotta e velocità",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Dare precedenza e manovrare in tempo utile per evitare la collisione",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Accelerare per passare per prima",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-002",
+    "categoryId": "colreg",
+    "text": "Di notte, la luce di via verde su un'imbarcazione indica il lato:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Sinistro (babordo)",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Destro (dritta)",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Di poppa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-003",
+    "categoryId": "colreg",
+    "text": "La luce bianca visibile a 360° (luce di fonda) si espone quando l'imbarcazione è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "In navigazione a vela",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "All'ancora",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "A motore in navigazione",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-004",
+    "categoryId": "colreg",
+    "text": "In generale, nell'incontro tra un'unità a vela e una a motore, la precedenza spetta:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "All'unità a motore",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "All'unità a vela, salvo eccezioni previste dalle regole (es. unità che pesca, non in grado di manovrare)",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "A nessuna delle due, si procede sempre a pari merito",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-005",
+    "categoryId": "colreg",
+    "text": "Un suono prolungato seguito da due suoni brevi, in manovra, indica generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Sto accostando a dritta",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Sto effettuando un sorpasso o segnalo una manovra particolare in visibilità ridotta",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Sto dando fondo l'ancora",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-006",
+    "categoryId": "colreg",
+    "text": "In caso di nebbia, un'imbarcazione a motore in navigazione deve emettere:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Un suono prolungato a intervalli non superiori a circa 2 minuti",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Nessun segnale sonoro",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Tre suoni brevi ogni minuto",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-007",
+    "categoryId": "colreg",
+    "text": "Tra due imbarcazioni a vela con il vento proveniente da lati opposti:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Ha la precedenza quella con il vento al lato dritto (mure a dritta)",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Ha sempre la precedenza quella con il vento a sinistra",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Hanno sempre pari precedenza",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-008",
+    "categoryId": "colreg",
+    "text": "Il segnale sonoro di \"due suoni brevi\" da parte di un'imbarcazione in manovra indica in genere:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Sto accostando a sinistra",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Sto facendo rotta indietro",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Sto dando fondo l'ancora",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-009",
+    "categoryId": "colreg",
+    "text": "Le regole internazionali per prevenire gli abbordi in mare (COLREG) si applicano:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Solo all'interno dei porti",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "A tutte le navi in alto mare e nelle acque a esso collegate navigabili da navi marittime",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Solo alle navi militari",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "COL-010",
+    "categoryId": "colreg",
+    "text": "Un'unità che sorpassa un'altra deve tenersi:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Libera dalla rotta dell'unità sorpassata, fino a manovra conclusa",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Può tagliare la rotta dell'altra unità subito dopo il sorpasso",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Non ha alcun obbligo particolare durante il sorpasso",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-001",
+    "categoryId": "meteorologia",
+    "text": "La scala Beaufort misura:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "L'altezza delle onde",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "L'intensità del vento",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "La pressione atmosferica",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-002",
+    "categoryId": "meteorologia",
+    "text": "L'avvicinamento di un fronte freddo è generalmente associato a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Tempo stabile e cielo sereno",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Rovesci, temporali e rotazione del vento",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Assenza totale di vento",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-003",
+    "categoryId": "meteorologia",
+    "text": "La pressione atmosferica si misura con:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "L'anemometro",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Il barometro",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "L'igrometro",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-004",
+    "categoryId": "meteorologia",
+    "text": "In una zona di alta pressione (anticiclone) il tempo è generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Stabile e con cielo prevalentemente sereno",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Instabile, con temporali frequenti",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Sempre nebbioso indipendentemente dalla stagione",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-005",
+    "categoryId": "meteorologia",
+    "text": "La brezza di mare soffia tipicamente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Di notte, dalla terra verso il mare",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Di giorno, dal mare verso la terra",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Solo nella stagione invernale",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-006",
+    "categoryId": "meteorologia",
+    "text": "La scala Douglas classifica:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Lo stato del mare",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La direzione del vento",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "La visibilità orizzontale",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-007",
+    "categoryId": "meteorologia",
+    "text": "Un cielo con nuvole cumuliformi in rapido sviluppo verticale può preannunciare:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Tempo stabile e duraturo",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Rovesci e temporali",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Nebbia persistente",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-008",
+    "categoryId": "meteorologia",
+    "text": "Nell'emisfero settentrionale, attorno a un centro di bassa pressione il vento ruota generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "In senso orario",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "In senso antiorario",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Non ha una rotazione definita",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-009",
+    "categoryId": "meteorologia",
+    "text": "Un'umidità relativa molto alta unita a un forte calo di temperatura serale favorisce la formazione di:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Nebbia",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Vento forte improvviso",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Alta pressione stabile",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "MET-010",
+    "categoryId": "meteorologia",
+    "text": "Il bollettino meteo marino fornisce tipicamente informazioni su:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Solo la temperatura dell'aria",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Vento, stato del mare e visibilità previsti per zona",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Solo l'orario delle maree",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-001",
+    "categoryId": "navigazione",
+    "text": "La declinazione magnetica è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "L'angolo tra il Nord vero e il Nord magnetico",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "L'angolo tra la prua e la rotta seguita",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "L'errore dovuto alle masse metalliche di bordo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-002",
+    "categoryId": "navigazione",
+    "text": "La deviazione della bussola è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "L'errore dovuto a masse ferrose e campi magnetici presenti a bordo",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La differenza tra Nord vero e Nord geografico",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "L'angolo di scarroccio dovuto al vento",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-003",
+    "categoryId": "navigazione",
+    "text": "Un nodo corrisponde a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Un miglio nautico all'ora",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Un chilometro all'ora",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un metro al secondo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-004",
+    "categoryId": "navigazione",
+    "text": "Il GPS fornisce all'imbarcazione:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Solo la direzione del vento",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Posizione, rotta e velocità rispetto al fondo",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Solo la profondità del fondale",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-005",
+    "categoryId": "navigazione",
+    "text": "Sulla carta nautica, la profondità è generalmente indicata in:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Metri",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Miglia nautiche",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Piedi, sempre e comunque",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-006",
+    "categoryId": "navigazione",
+    "text": "Il punto nave per allineamento (o per rilevamento) si ottiene:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Incrociando due o più rilevamenti di punti cospicui noti",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Misurando solamente la velocità dell'imbarcazione",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Leggendo esclusivamente lo scandaglio",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-007",
+    "categoryId": "navigazione",
+    "text": "Lo scarroccio è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Lo spostamento della rotta effettiva dovuto al vento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Lo spostamento dovuto esclusivamente alla corrente",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un errore proprio dello strumento GPS",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-008",
+    "categoryId": "navigazione",
+    "text": "L'ecoscandaglio serve a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Misurare la profondità dell'acqua sotto la chiglia",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Misurare la velocità del vento",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Misurare la rotta seguita",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-009",
+    "categoryId": "navigazione",
+    "text": "Una rotta vera è la rotta:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Corretta per deviazione e declinazione, riferita al Nord vero",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Letta direttamente in bussola senza alcuna correzione",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Sempre numericamente uguale alla rotta bussola",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NAV-010",
+    "categoryId": "navigazione",
+    "text": "Il miglio nautico corrisponde a circa:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "1852 metri",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "1000 metri",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "1609 metri",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-001",
+    "categoryId": "normativa",
+    "text": "La patente nautica è obbligatoria per la conduzione di unità da diporto:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Sempre, in ogni caso e per qualunque imbarcazione",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Oltre determinati limiti di potenza, lunghezza o distanza dalla costa stabiliti dalla normativa",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Mai, essendo sempre facoltativa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-002",
+    "categoryId": "normativa",
+    "text": "Lo scarico in mare di rifiuti plastici da un'unità da diporto è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Consentito ovunque",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Vietato",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Consentito solo oltre le 3 miglia dalla costa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-003",
+    "categoryId": "normativa",
+    "text": "La documentazione di sicurezza dell'unità da diporto attesta:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La conformità dell'unità alle dotazioni di sicurezza previste",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Solo il colore dell'imbarcazione",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Il consumo di carburante dichiarato",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-004",
+    "categoryId": "normativa",
+    "text": "Il comandante di un'unità da diporto, in caso di incidente con persone ferite, ha l'obbligo di:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Allontanarsi rapidamente dal luogo dell'incidente",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Prestare soccorso e darne notizia alle autorità competenti",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Nessun obbligo particolare",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-005",
+    "categoryId": "normativa",
+    "text": "L'assicurazione per la responsabilità civile verso terzi per le unità da diporto a motore è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Facoltativa",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Obbligatoria",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Richiesta solo per unità di lunghezza superiore a 24 metri",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-006",
+    "categoryId": "normativa",
+    "text": "Le aree marine protette impongono generalmente:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Nessuna limitazione alla navigazione",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Limitazioni o divieti di navigazione, ancoraggio e pesca a tutela dell'ambiente",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "L'obbligo di tenere la massima velocità consentita",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-007",
+    "categoryId": "normativa",
+    "text": "I documenti dell'unità da diporto e del conducente devono trovarsi:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Sempre a bordo durante la navigazione",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Solo in caso di richiesta scritta anticipata dalle autorità",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Non sono mai richiesti a bordo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-008",
+    "categoryId": "normativa",
+    "text": "Superare i limiti di velocità stabiliti in prossimità della costa o in aree regolamentate:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "È consentito se non ci sono bagnanti visibili nelle vicinanze",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Costituisce una violazione sanzionabile della normativa vigente",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "È sempre permesso durante le ore diurne",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-009",
+    "categoryId": "normativa",
+    "text": "Il comandante che conduce un'unità da diporto sotto l'effetto di alcol o sostanze stupefacenti:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Commette un illecito sanzionabile",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Non commette alcuna infrazione",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Può farlo se ritiene di avere sufficiente esperienza",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "NOR-010",
+    "categoryId": "normativa",
+    "text": "Uno sversamento accidentale di idrocarburi in mare deve essere:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Ignorato se ritenuto di piccola quantità",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Segnalato immediatamente alle autorità marittime competenti",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Nascosto per evitare sanzioni",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-001",
+    "categoryId": "vela",
+    "text": "L'andatura in cui il vento proviene esattamente da prua si chiama:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Prua al vento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Poppa piena",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Al traverso",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-002",
+    "categoryId": "vela",
+    "text": "Quando il vento proviene esattamente da poppa si naviga:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Di bolina",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "In poppa (vento in poppa)",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Al traverso",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-003",
+    "categoryId": "vela",
+    "text": "La bolina stretta è l'andatura:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Più vicina possibile alla direzione di provenienza del vento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Con il vento esattamente in poppa",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Con il vento esattamente al traverso",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-004",
+    "categoryId": "vela",
+    "text": "La virata (di prua) è la manovra in cui:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La prua attraversa la direzione del vento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La poppa attraversa la direzione del vento",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Si ammaina semplicemente la randa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-005",
+    "categoryId": "vela",
+    "text": "L'abbattuta (o strambata) è la manovra in cui:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La prua attraversa la direzione del vento",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "La poppa attraversa la direzione del vento",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Si issa soltanto il fiocco",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-006",
+    "categoryId": "vela",
+    "text": "La scotta della randa serve a:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Regolare l'angolo della vela rispetto al vento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Issare l'albero",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Misurare la velocità del vento",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-007",
+    "categoryId": "vela",
+    "text": "Il fiocco è:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "La vela di prua",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "La vela maggiore posta sull'albero principale",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Un tipo di cima da ormeggio",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-008",
+    "categoryId": "vela",
+    "text": "Navigando di bolina, se la barca sbanda eccessivamente conviene:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Cazzare ulteriormente le vele",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Lascare leggermente la randa oppure orzare",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Issare vele di superficie maggiore",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-009",
+    "categoryId": "vela",
+    "text": "Il termine \"orzare\" significa:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Accostare la prua verso la direzione di provenienza del vento",
+        "correct": true
+      },
+      {
+        "id": "b",
+        "text": "Allontanare la prua dalla direzione del vento",
+        "correct": false
+      },
+      {
+        "id": "c",
+        "text": "Ammainare tutte le vele",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "id": "VEL-010",
+    "categoryId": "vela",
+    "text": "Il termine \"poggiare\" significa:",
+    "answers": [
+      {
+        "id": "a",
+        "text": "Accostare la prua verso il vento",
+        "correct": false
+      },
+      {
+        "id": "b",
+        "text": "Allontanare la prua dalla direzione di provenienza del vento",
+        "correct": true
+      },
+      {
+        "id": "c",
+        "text": "Issare la randa",
+        "correct": false
+      }
+    ]
+  }
+]

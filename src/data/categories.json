@@ -1,0 +1,57 @@
+[
+  {
+    "id": "scafo",
+    "label": "Teoria dello scafo, del galleggiamento e della stabilità",
+    "shortLabel": "Teoria dello scafo",
+    "officialCount": 1
+  },
+  {
+    "id": "motori",
+    "label": "Elementi di motoristica navale",
+    "shortLabel": "Motori",
+    "officialCount": 1
+  },
+  {
+    "id": "sicurezza",
+    "label": "Sicurezza della navigazione",
+    "shortLabel": "Sicurezza",
+    "officialCount": 3
+  },
+  {
+    "id": "manovra",
+    "label": "Manovra e condotta",
+    "shortLabel": "Manovra e Condotta",
+    "officialCount": 4
+  },
+  {
+    "id": "colreg",
+    "label": "Normativa COLREG e segnalamento marittimo",
+    "shortLabel": "ColReg e segnalamento",
+    "officialCount": 2
+  },
+  {
+    "id": "meteorologia",
+    "label": "Elementi di meteorologia",
+    "shortLabel": "Meteorologia",
+    "officialCount": 2
+  },
+  {
+    "id": "navigazione",
+    "label": "Navigazione cartografica ed elettronica",
+    "shortLabel": "Navigazione",
+    "officialCount": 4
+  },
+  {
+    "id": "normativa",
+    "label": "Normativa diportistica e tutela ambientale",
+    "shortLabel": "Normativa e ambiente",
+    "officialCount": 3
+  },
+  {
+    "id": "vela",
+    "label": "Teoria della vela e andature",
+    "shortLabel": "Vela",
+    "officialCount": 5,
+    "specialization": true
+  }
+]
