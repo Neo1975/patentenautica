@@ -13,7 +13,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-5 sm:grid-cols-3">
         <Link
           href="/esame"
           className="group flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
@@ -45,13 +45,29 @@ export default function HomePage() {
             tempo né soglie di errore.
           </p>
         </Link>
+
+        <Link
+          href="/carteggio"
+          className="group flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+        >
+          <span className="text-3xl" aria-hidden>
+            🧭
+          </span>
+          <h2 className="text-lg font-bold text-slate-900 group-hover:text-sky-600 dark:text-slate-50">
+            Test di carteggio
+          </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
+            5 esercizi in 20 minuti: inserisci i valori richiesti (distanze, orari, coordinate),
+            verificati automaticamente. Massimo 1 errore.
+          </p>
+        </Link>
       </div>
 
-      <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-200">
+      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
         <p>
-          <strong>Nota:</strong> le domande incluse in questa versione sono un set di esempio
-          rappresentativo delle materie d&apos;esame, non ancora il testo integrale ufficiale del
-          Ministero. Il test di carteggio non è ancora disponibile.
+          Il quiz contiene l&apos;intero elenco ufficiale delle domande pubblicato dal Ministero
+          delle Infrastrutture e dei Trasporti (Allegato A, DD 131 del 31 maggio 2022), comprese le
+          immagini di riferimento richiamate da alcune domande.
         </p>
       </div>
     </div>

@@ -38,6 +38,15 @@ export default function QuestionCard({
         {question.text}
       </p>
 
+      {question.image && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={question.image}
+          alt="Immagine di riferimento per la domanda"
+          className="mb-4 max-h-72 w-auto rounded-xl border border-slate-200 bg-white object-contain dark:border-slate-700"
+        />
+      )}
+
       <div className="flex flex-col gap-2">
         {question.answers.map((answer) => {
           const isSelected = selectedAnswerId === answer.id;

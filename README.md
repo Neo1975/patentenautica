@@ -1,8 +1,10 @@
 # Patente Nautica – Simulatore Quiz
 
 App web per esercitarsi ai quiz della patente nautica, pronta per il deploy su [Vercel](https://vercel.com).
+Contiene il testo integrale ufficiale pubblicato dal Ministero delle Infrastrutture e dei Trasporti
+(Allegato A al DD 131 del 31 maggio 2022): 1722 domande di teoria e 185 esercizi di carteggio.
 
-## Cosa fa (v0.1)
+## Cosa fa
 
 - **Simulazione esame ufficiale**: 20 domande composte secondo la ripartizione ministeriale per materia
   (scafo, motori, sicurezza, manovra, ColReg, meteorologia, navigazione, normativa), 30 minuti a disposizione,
@@ -10,35 +12,56 @@ App web per esercitarsi ai quiz della patente nautica, pronta per il deploy su [
   massimo 1 errore) se lo studente ha scelto quella specializzazione.
 - **Allenamento per argomento**: lo studente sceglie liberamente uno o più argomenti e quante domande
   affrontare, senza limiti di tempo né soglie di errore.
-- Revisione finale con le domande sbagliate o senza risposta, risposta corretta evidenziata.
+- **Test di carteggio**: 5 esercizi estratti a caso (a scelta tra le carte 5D e 42D), 20 minuti a
+  disposizione, massimo 1 esercizio errato. Il candidato legge il testo dell'esercizio così come pubblicato
+  dal Ministero e inserisce i valori richiesti (distanza, ora di arrivo, carburante da imbarcare, coordinate
+  di partenza/arrivo, rilevamenti, ecc.); i valori vengono confrontati con l'intervallo di soluzione
+  ufficiale applicando un arrotondamento (0,1 per miglia/nodi/litri/minuti di coordinate, 1° intero per i
+  rilevamenti in gradi). Un esercizio è considerato errato se anche un solo quesito al suo interno è
+  sbagliato o incompleto.
+- Domande corredate delle immagini di riferimento ministeriali, quando richieste (120 domande su 1722).
+- Revisione finale con le domande/esercizi sbagliati o senza risposta, soluzione corretta evidenziata.
 
-**Non ancora incluso** (prossimi passi): test di carteggio, elenco completo e ufficiale delle domande
-ministeriali (attualmente c'è un set di esempio), eventuale backend/salvataggio storico tentativi.
+**Non ancora incluso** (possibili prossimi passi): un vero e proprio editor/visualizzatore di carta
+nautica interattivo (il test di carteggio verifica solo i valori numerici del risultato, non il tracciato),
+persistenza/storico dei tentativi, autenticazione utenti.
 
 ## Struttura del progetto
 
 ```
 src/
   app/
-    page.tsx              Home
-    esame/page.tsx         Setup + avvio simulazione esame ufficiale
-    allenamento/page.tsx   Setup + avvio allenamento per argomento
-    layout.tsx             Layout comune (header/footer)
+    page.tsx                Home
+    esame/page.tsx           Setup + avvio simulazione esame ufficiale
+    allenamento/page.tsx     Setup + avvio allenamento per argomento
+    carteggio/page.tsx       Setup (scelta carta) + avvio test di carteggio
+    layout.tsx                Layout comune (header/footer)
   components/
-    QuizRunner.tsx          Motore di esecuzione del quiz (timer, navigazione, invio)
-    QuestionCard.tsx        Card di visualizzazione di una domanda
-    QuestionNav.tsx         Griglia di navigazione rapida tra le domande
-    CategoryPicker.tsx      Selezione argomenti (modalità allenamento)
-    ResultSummary.tsx       Riepilogo esito + revisione errori
-    Timer.tsx               Countdown / cronometro
+    QuizRunner.tsx            Motore di esecuzione del quiz base/vela (timer, navigazione, invio)
+    QuestionCard.tsx          Card di visualizzazione di una domanda (con immagine opzionale)
+    QuestionNav.tsx            Griglia di navigazione rapida tra domande/esercizi
+    CategoryPicker.tsx        Selezione argomenti (modalità allenamento)
+    ResultSummary.tsx         Riepilogo esito + revisione errori (base/vela/allenamento)
+    Timer.tsx                  Countdown / cronometro
+    CarteggioExerciseCard.tsx  Card di un esercizio di carteggio (scenario + campi di input)
+    CarteggioRunner.tsx        Motore di esecuzione del test di carteggio
+    CarteggioResultSummary.tsx Riepilogo esito + revisione del test di carteggio
   lib/
-    types.ts                Tipi condivisi (Question, QuizConfig, ...)
-    categories.ts            Helper sulle categorie/materie
-    questions.ts             Generazione del quiz ufficiale e di allenamento
-    scoring.ts                Calcolo del risultato (corrette/errate/non date, superato/non superato)
+    types.ts                  Tipi condivisi (Question, QuizConfig, tipi Carteggio, ...)
+    categories.ts               Helper sulle categorie/materie
+    questions.ts                 Generazione del quiz ufficiale e di allenamento
+    scoring.ts                   Calcolo del risultato del quiz base/vela
+    carteggio.ts                 Estrazione degli esercizi di carteggio per carta nautica
+    carteggio-check.ts           Validazione delle risposte di carteggio (con arrotondamento)
   data/
-    categories.json          Elenco materie con numero di domande ufficiali per materia
-    questions.json            Banca dati domande (attualmente un set di esempio, 90 domande)
+    categories.json             Elenco materie con numero di domande ufficiali per materia
+    questions.json               Banca dati completa delle domande (1722, testo integrale ministeriale)
+    carteggio.json                Banca dati completa degli esercizi di carteggio (185)
+    deviation-tables.json         Tabelle di deviazione bussola delle carte 5D/42D (riferimento)
+public/
+  figures/                       Le 103 immagini di riferimento richiamate dalle domande
+scripts/
+  verify-carteggio-check.ts     Script di verifica esaustiva della logica di correzione del carteggio
 ```
 
 ## Il file delle domande (`src/data/questions.json`)
@@ -47,24 +70,57 @@ Ogni domanda ha questo formato:
 
 ```json
 {
-  "id": "SIC-003",
+  "id": "sicurezza-0003",
   "categoryId": "sicurezza",
   "text": "Testo della domanda...",
   "answers": [
     { "id": "a", "text": "Risposta 1", "correct": false },
     { "id": "b", "text": "Risposta 2", "correct": true },
     { "id": "c", "text": "Risposta 3", "correct": false }
+  ],
+  "image": "/figures/figura-12.png",
+  "meta": { "progressivo": "1.5.2 - 3", "capitolo": "BASE", "tema": "SICUREZZA DELLA NAVIGAZIONE", "voce": "..." }
+}
+```
+
+`categoryId` deve corrispondere a un `id` presente in `src/data/categories.json`. `image` è `null` quando la
+domanda non richiede un'immagine. `meta` conserva i riferimenti originali del quiz ministeriale (numero
+progressivo, capitolo, tema, voce) a scopo di tracciabilità e non è usato dall'interfaccia.
+
+## Il file degli esercizi di carteggio (`src/data/carteggio.json`)
+
+Ogni esercizio ha questo formato (esempio semplificato):
+
+```json
+{
+  "id": "cart-4_1_1-1",
+  "progressivo": "4.1.1 - 1",
+  "carta": "5D",
+  "settore": "SETTORE NORD OVEST ORIZZONTALE",
+  "argomento": null,
+  "scenario": "Partenza alle ore 09:00 da Capo di S. Andrea ... determinare:",
+  "quesiti": [
+    { "n": 1, "label": "distanza", "expected": { "type": "range", "min": 5.2, "max": 5.8, "unit": "M", "raw": "5.2 ÷ 5.8 M" } },
+    { "n": 2, "label": "ora di arrivo", "expected": { "type": "time_range", "min": "09:57", "max": "10:03", "raw": "09:57÷10:03" } },
+    { "n": 4, "label": "coordinate punto di partenza", "expected": { "type": "coordinate", "lat": { "deg": 42, "minMin": 48.2, "minMax": 48.8, "hemi": "N" }, "long": { "deg": 10, "minMin": 8.1, "minMax": 8.7, "hemi": "E" } } }
   ]
 }
 ```
 
-`categoryId` deve corrispondere a un `id` presente in `src/data/categories.json`. Per sostituire il set di
-esempio con l'elenco ufficiale completo (dall'Allegato A del DD 131/2022), basta generare un file con lo
-stesso formato e sostituire `questions.json` — nessuna modifica al codice è necessaria, a patto di
-mantenere gli stessi `categoryId`.
+I tipi di risposta attesa sono quattro: `range` (intervallo numerico con unità), `single` (valore esatto),
+`time_range` (intervallo orario) e `coordinate` (latitudine/longitudine, ciascuna con grado fisso e
+intervallo di minuti). La logica di verifica e arrotondamento è in `src/lib/carteggio-check.ts`; lo script
+`scripts/verify-carteggio-check.ts` verifica che, per tutti i 385 quesiti del dataset, un valore a metà
+dell'intervallo ufficiale venga sempre accettato e un valore chiaramente fuori intervallo venga sempre
+respinto (`npx tsx scripts/verify-carteggio-check.ts`).
 
-Il test di carteggio (pagine 287 in poi del PDF ministeriale) richiede un tipo di esercizio diverso
-(tracciare rotte su una carta nautica), non ancora modellato in questa versione.
+## Provenienza dei dati
+
+Domande, esercizi di carteggio, immagini e tabelle di deviazione sono stati estratti automaticamente dal PDF
+ufficiale "Allegato A – Quiz patenti nautiche" (DD 131 del 31 maggio 2022) del Ministero delle Infrastrutture
+e dei Trasporti. Alcune righe con anomalie di estrazione (testo sovrapposto, casella V/F mancante nel PDF
+sorgente) sono state corrette manualmente confrontandole con il testo originale; i dettagli sono nella
+cronologia del progetto.
 
 ## Sviluppo locale
 
@@ -102,4 +158,5 @@ vercel
 - [Next.js 16](https://nextjs.org) (App Router, Turbopack)
 - React 19 + TypeScript
 - Tailwind CSS v4
-- Nessun database: le domande sono statiche (bundle JSON), tutta la logica del quiz gira nel browser.
+- Nessun database: domande, esercizi ed immagini sono statici (bundle JSON + asset), tutta la logica del
+  quiz e della correzione del carteggio gira nel browser.
