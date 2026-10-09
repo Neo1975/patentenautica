@@ -25,6 +25,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
               <Link href="/allenamento" className="hover:text-sky-600">
                 Allenamento
               </Link>
+              <Link href="/ripasso" className="hover:text-sky-600">
+                Da ripassare
+              </Link>
             </nav>
           </div>
         </header>

@@ -13,7 +13,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2">
         <Link
           href="/esame"
           className="group flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
@@ -60,6 +60,21 @@ export default function HomePage() {
             5 esercizi in 20 minuti, con la prova giusta per la tua categoria di patente (entro le 12
             miglia o senza limiti). Inserisci i valori richiesti, verificati automaticamente. Massimo 1
             errore.
+          </p>
+        </Link>
+
+        <Link
+          href="/ripasso"
+          className="group flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-sky-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900"
+        >
+          <span className="text-3xl" aria-hidden>
+            🔖
+          </span>
+          <h2 className="text-lg font-bold text-slate-900 group-hover:text-sky-600 dark:text-slate-50">
+            Da ripassare
+          </h2>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
+            Le domande che hai segnato durante i quiz. Restano qui finché non le togli tu.
           </p>
         </Link>
       </div>

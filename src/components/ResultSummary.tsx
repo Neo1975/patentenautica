@@ -1,6 +1,9 @@
+"use client";
+
 import type { AnswerMap, QuizConfig, QuizResult } from "@/lib/types";
 import { getCategory } from "@/lib/categories";
 import QuestionCard from "@/components/QuestionCard";
+import { ripassoKey, useRipasso } from "@/lib/ripasso";
 
 type Props = {
   config: QuizConfig;
@@ -13,6 +16,15 @@ type Props = {
 export default function ResultSummary({ config, answersBySection, result, onRestart, onHome }: Props) {
   const totalCorrect = result.sections.reduce((a, s) => a + s.correct, 0);
   const totalQuestions = result.sections.reduce((a, s) => a + s.total, 0);
+  const { has, addMany } = useRipasso();
+
+  const missedKeys = config.sections.flatMap((section) => {
+    const answers = answersBySection[section.key] ?? {};
+    return section.questions
+      .filter((q) => !q.answers.find((a) => a.id === answers[q.id])?.correct)
+      .map((q) => ripassoKey("q", q.id));
+  });
+  const allMissedMarked = missedKeys.every((k) => has(k));
 
   return (
     <div className="flex flex-col gap-6">
@@ -100,9 +112,21 @@ export default function ResultSummary({ config, answersBySection, result, onRest
       </div>
 
       <div className="flex flex-col gap-4">
-        <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
-          Revisione domande sbagliate o senza risposta
-        </h3>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+            Revisione domande sbagliate o senza risposta
+          </h3>
+          {missedKeys.length > 0 && (
+            <button
+              type="button"
+              onClick={() => addMany(missedKeys)}
+              disabled={allMissedMarked}
+              className="rounded-xl border border-amber-400 px-4 py-2 text-sm font-semibold text-amber-800 transition hover:bg-amber-50 disabled:cursor-default disabled:opacity-60 dark:border-amber-600 dark:text-amber-200 dark:hover:bg-amber-950"
+            >
+              {allMissedMarked ? "Errori già nel ripasso" : "Aggiungi gli errori al ripasso"}
+            </button>
+          )}
+        </div>
         {config.sections.flatMap((section) => {
           const answers = answersBySection[section.key] ?? {};
           const toReview = section.questions.filter((q) => {

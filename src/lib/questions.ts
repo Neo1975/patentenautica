@@ -101,3 +101,28 @@ export function buildCustomQuiz(categoryIds: string[], count: number): QuizConfi
     ],
   };
 }
+
+/**
+ * Costruisce una sessione di ripasso con le domande segnate dallo studente
+ * (in ordine casuale). Come l'allenamento: nessun limite di tempo né di errori.
+ */
+export function buildReviewQuiz(questionIds: string[]): QuizConfig {
+  const ids = new Set(questionIds);
+  const selected = shuffle(
+    allQuestions.filter((q) => ids.has(q.id)).map((q) => ({ ...q, answers: shuffle(q.answers) }))
+  );
+
+  return {
+    mode: "allenamento",
+    title: "Ripasso",
+    sections: [
+      {
+        key: "ripasso",
+        label: "Domande da ripassare",
+        questions: selected,
+        timeLimitSec: null,
+        maxErrors: null,
+      },
+    ],
+  };
+}

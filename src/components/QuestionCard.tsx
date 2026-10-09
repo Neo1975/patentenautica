@@ -1,4 +1,5 @@
 import type { Question } from "@/lib/types";
+import RipassoToggle from "@/components/RipassoToggle";
 
 type Props = {
   question: Question;
@@ -27,11 +28,14 @@ export default function QuestionCard({
         <span>
           Domanda {index + 1} di {total}
         </span>
-        {categoryLabel && (
-          <span className="rounded-full bg-sky-50 px-2.5 py-1 text-sky-700 dark:bg-sky-950 dark:text-sky-300">
-            {categoryLabel}
-          </span>
-        )}
+        <div className="flex items-center gap-2">
+          {categoryLabel && (
+            <span className="rounded-full bg-sky-50 px-2.5 py-1 text-sky-700 dark:bg-sky-950 dark:text-sky-300">
+              {categoryLabel}
+            </span>
+          )}
+          <RipassoToggle id={question.id} />
+        </div>
       </div>
 
       <p className="mb-4 text-base font-semibold leading-relaxed text-slate-900 dark:text-slate-50">
